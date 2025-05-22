@@ -1,3 +1,25 @@
+"""
+Django settings for the backend project.
+
+This file contains the primary configuration settings for the Django project,
+including settings for the database, security, installed apps, middleware,
+templates, and static files.
+
+Key settings include:
+- `DATABASES`: Configuration for the PostgreSQL database.
+- `INSTALLED_APPS`: List of applications enabled in the project.
+- `MIDDLEWARE`: Middleware stack for processing requests and responses.
+- `TEMPLATES`: Configuration for template rendering.
+- `CORS_ORIGIN_WHITELIST`: Allowed origins for cross-origin requests.
+
+This file also defines basic security settings, such as the secret key,
+allowed hosts, and password validation.
+
+Make sure to keep sensitive settings, like the `SECRET_KEY`, out of version control
+by using environment variables or a separate settings file.
+"""
+
+
 import os
 from pathlib import Path
 
