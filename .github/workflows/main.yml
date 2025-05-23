@@ -70,4 +70,4 @@ jobs:
         with:
           context: ./backend/
           push: true
-          tags: gayfullina.a@gmail.com/taski_backend:latest        
+          tags: alinagay/taski_backend:latest        
