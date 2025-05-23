@@ -14,6 +14,7 @@ services:
   backend:
     build: ./backend/
     env_file: .env
+    command: cp -r /app/collected_static/. /backend_static/static/ 
     volumes:
       - static:/backend_static
 
