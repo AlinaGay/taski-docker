@@ -11,20 +11,11 @@ services:
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
-    networks:
-      - backend
-    ports:
-      - 5432:5432
   backend:
     build: ./backend/
     env_file: .env
-    command: cp -r /app/collected_static/. /backend_static/static/ 
     volumes:
       - static:/backend_static
-    depends_on:
-      - db
-    networks:
-      - backend  
 
   frontend:
     env_file: .env
@@ -40,6 +31,3 @@ services:
       - static:/staticfiles
     ports:
       - 8000:80
-
-  networks: 
-    backend:
